@@ -34,7 +34,7 @@ export default function AccountSettings({
       </div>
 
       <p className="mt-2 text-sm/6 text-gray-600">
-        Don't know how to find your Discord ID?{" "}
+        Don&apos;t know how to find your Discord ID?{" "}
         <Link href="#" className="text-brand-600 hover:text-brand-500">
           Learn how to obtain it here
         </Link>

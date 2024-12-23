@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import AccountSettings from "./account-settings"
 
-export default async function page() {
+export default async function Page() {
   const auth = await currentUser()
 
   if (!auth) {
