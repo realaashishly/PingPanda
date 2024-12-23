@@ -4,12 +4,10 @@ import Heading from "@/components/heading"
 import MaxWidthWrapper from "@/components/max-width-wrapper"
 import { Button } from "@/components/ui/button"
 import { useUser } from "@clerk/nextjs"
-import { useMutation } from "@tanstack/react-query"
 import { CheckIcon } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 const Page = () => {
-  const { user } = useUser()
   const router = useRouter()
 
   const INCLUDED_FEATURES = [
@@ -25,8 +23,8 @@ const Page = () => {
         <div className="mx-auto max-w-2xl text-center">
           <Heading className="text-center">Simple no-tricks pricing</Heading>
           <p className="mt-6 text-base/7 text-gray-600 max-w-prose mx-auto text-center text-pretty">
-            We dislike subscriptions, and you probably do as well. That's why we
-            provide free access to PingPanda without any cost.
+            We dislike subscriptions, and you probably do as well. That&apos;s
+            why we provide free access to PingPanda without any cost.
           </p>
         </div>
 
@@ -43,7 +41,7 @@ const Page = () => {
             </p>
             <div className="mt-10 flex items-center gap-x-4">
               <h4 className="flex-none text-sm font-semibold leading-6 text-brand-600">
-                What's included
+                What&apos;s included
               </h4>
               <div className="h-px flex-auto bg-gray-100" />
             </div>
@@ -62,7 +60,7 @@ const Page = () => {
             <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
               <div className="mx-auto max-w-xs py-8">
                 <p className="text-base font-semibold text-gray-600">
-                  Own it forever, at no cos
+                  Own it forever, at no cost
                 </p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
                   <span className="text-5xl font-bold tracking-tight text-gray-900">
@@ -73,7 +71,12 @@ const Page = () => {
                   </span>
                 </p>
 
-                <Button onClick={() => router.push("/dashboard")} className="mt-6 px-20">Get PingPanda</Button>
+                <Button
+                  onClick={() => router.push("/dashboard")}
+                  className="mt-6 px-20"
+                >
+                  Get PingPanda
+                </Button>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Secure payment. Start monitoring in minutes.
                 </p>
